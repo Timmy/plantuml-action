@@ -2,6 +2,14 @@ name: Test PlantUML Action
 on: [push, pull_request]
 
 jobs:
+  shellcheck:
+    name: Analyze shell scripts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Run shellcheck
+        run: bash -c 'shopt -s globstar nullglob; shellcheck **/*.sh'
   process:
     name: Process PlantUML diagram
     runs-on: ubuntu-latest
