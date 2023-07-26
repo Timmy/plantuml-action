@@ -23,4 +23,4 @@ jobs:
         with:
           args: "-tpng diagram.puml"
       - name: Display diagram
-        run: cat diagram.utxt
+        run: cat diagram.puml
