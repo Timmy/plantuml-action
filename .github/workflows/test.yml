@@ -19,6 +19,6 @@ jobs:
       - name: Render diagram
         uses: ./
         with:
-          args: "-tpng test_diagram.puml"
+          args: "-tpng ${{ github.workspace }}/plantuml-e2e-action/test_diagram.puml"
       - name: Display diagram
         run: cat test_diagram.png
