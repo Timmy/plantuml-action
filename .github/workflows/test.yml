@@ -19,6 +19,6 @@ jobs:
       - name: Render diagram
         uses: ./
         with:
-          args: "-tpng ${{ github.workspace }}/test_diagram.puml"
+          args: "-tpng test_diagram.puml"
       - name: Display diagram
-        run: cat ${{ github.workspace }}/test_diagram.png
+        run: cat test_diagram.png
