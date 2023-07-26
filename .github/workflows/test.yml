@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Run shellcheck
         run: bash -c 'shopt -s globstar nullglob; shellcheck **/*.sh'
   process:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Describe diagram
         run: 'printf "@startuml\nBob->Alice : hello\n@enduml" > diagram.txt'
       - name: Render diagram
