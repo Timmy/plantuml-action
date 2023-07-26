@@ -17,7 +17,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Describe diagram
-        run: 'printf "@startuml\nclass sagemaker_rightline.model.Configuration{some_argument: List[str]}\n@enduml" > diagram.puml'
+        run: 'printf "@startuml\nclass some.module.SomeClass{some_argument: List[str]}\n@enduml" > diagram.puml'
       - name: Render diagram
         uses: ./
         with:
