@@ -17,10 +17,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Describe diagram
-        run: 'printf "@startuml\nBob->Alice : hello\n@enduml" > diagram.txt'
+        run: 'printf "@startuml\nclass sagemaker_rightline.model.Configuration{some_argument: List[str]}\n@enduml" > diagram.puml'
       - name: Render diagram
         uses: ./
         with:
-          args: '-tutxt diagram.txt'
+          args: "-tpng diagram.puml"
       - name: Display diagram
         run: cat diagram.utxt
