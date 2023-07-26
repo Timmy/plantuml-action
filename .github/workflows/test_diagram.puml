@@ -1,0 +1,9 @@
+@startuml test_diagram
+namespace some {
+  namespace module {}
+}
+class some.module.SomeClass {
+  validations: List[Validation]
+  sagemaker_pipeline: Pipeline
+}
+@enduml

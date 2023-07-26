@@ -16,11 +16,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Describe diagram
-        run: 'printf "@startuml\nclass some.module.SomeClass{some_argument: List[str]}\n@enduml" > diagram.puml'
       - name: Render diagram
         uses: ./
         with:
-          args: "-tpng diagram.puml"
+          args: "-tpng test_diagram.puml"
       - name: Display diagram
-        run: cat diagram.puml
+        run: cat test_diagram.png
